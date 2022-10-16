@@ -1,7 +1,3 @@
-//задача 2 по пар проге 
-//рандомные числа 0,9
-//перемножаются 2 матрицы 
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -9,22 +5,26 @@
 
 int main() {
 	srand(time(NULL));
+
+	//filling all matrices with numbers
 	int F[n][n], S[n][n], R[n][n];
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < n; j++) {
 			F[i][j] = rand() % 10;
 			S[i][j] = rand() % 10;
+			R[i][j] = 0;
 		}
 	}
 
+	//matrix multiplication
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < n; j++) {
-			R[i][j] = 0;
 			for (int k = 0; k < n; k++) {
 				R[i][j] += F[i][k] * S[k][j];
 			}
 		}
 	}
+
 	printf("Output of the first matrix: \n");
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < n; j++) {
