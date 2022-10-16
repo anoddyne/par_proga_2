@@ -16,32 +16,23 @@ int main() {
 		}
 	}
 
-	//matrix multiplication
+    printf("Output of the first matrix: \n");
 	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < n; j++) {
-			for (int k = 0; k < n; k++) {
-				R[i][j] += F[i][k] * S[k][j];
-			}
-		}
-	}
-
-	printf("Output of the first matrix: \n");
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < n; j++) {
+		for (int j = 0; j < n; j++) 
 			printf("%d ", F[i][j]);
-		}
 		printf("\n");
 	}
 	printf("Output of the second matrix: \n");
 	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < n; j++) {
+		for (int j = 0; j < n; j++) 
 			printf("%d ", S[i][j]);
-		}
 		printf("\n");
 	}
 	printf("Result of matrices multiplication: \n");
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < n; j++) {
+			for (int k = 0; k < n; k++)
+				R[i][j] += F[i][k] * S[k][j];
 			printf("%d ", R[i][j]);
 		}
 		printf("\n");
