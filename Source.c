@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 
 //here you can set the matrices size, change the number 3 to any other number
 #define n 3
